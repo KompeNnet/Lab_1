@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace Lab_1
 {
-    class Ellipse : IShape
+    class Rectangle : IShape
     {
         public void Draw(GeometryGroup mainDrawingGroup)
         {

@@ -12,9 +12,9 @@ namespace Lab_1
         private static List<IShape> mainList;
         GeometryDrawing mainDrawing;
 
-        public Figures(GeometryDrawing mainDrawing)
+        public Figures()
         {
-            this.mainDrawing = mainDrawing;
+            this.mainDrawing = new GeometryDrawing();
             mainList = new List<IShape>();
         }
 
@@ -23,14 +23,18 @@ namespace Lab_1
             mainList.Add(shape);
         }
 
-        public void Drawing(GeometryDrawing mainDrawing)
+        public DrawingImage Drawing()
         {
+            GeometryDrawing mainDrawing = new GeometryDrawing();
+            GeometryGroup mainDrawingGroup = new GeometryGroup();
             mainDrawing.Brush = Brushes.Brown;
-            mainDrawing.Pen = new Pen(mainDrawing.Brush, 2);
+            mainDrawing.Pen = new Pen(mainDrawing.Brush, 0.5);
             foreach (IShape shape in mainList)
             {
-                shape.Draw(mainDrawing);
+                shape.Draw(mainDrawingGroup);
             }
+            mainDrawing.Geometry = mainDrawingGroup;
+            return new DrawingImage(mainDrawing);
         }
     }
 }

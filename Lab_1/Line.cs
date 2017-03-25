@@ -18,9 +18,9 @@ namespace Lab_1
             this.end = _finish;
         }
 
-        public void Draw(GeometryDrawing mainDrawing)
+        public void Draw(GeometryGroup mainDrawingGroup)
         {
-            LineGeometry line = new LineGeometry(start, end);
+            mainDrawingGroup.Children.Add(new LineGeometry(start, end));
         }
     }
 }

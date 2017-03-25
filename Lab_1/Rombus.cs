@@ -12,15 +12,15 @@ namespace Lab_1
     {
         private Point top, right;
 
-        public Rombus(Point _start, Point _finish)
+        public Rombus(Point _start, Point _finish) : base(_start, _finish)
         {
             this.top = _start;
             this.right = _finish;
         }
 
-        public void Draw(GeometryDrawing mainDrawing)
+        public void Draw(GeometryGroup mainDrawingGroup)
         {
-
+            mainDrawingGroup.Children.Add(new LineGeometry());
         }
     }
 }

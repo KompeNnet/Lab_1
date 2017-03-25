@@ -9,7 +9,7 @@ namespace Lab_1
 {
     class Circle : IShape
     {
-        public void Draw(GeometryDrawing mainDrawing)
+        public void Draw(GeometryGroup mainDrawingGroup)
         {
 
         }

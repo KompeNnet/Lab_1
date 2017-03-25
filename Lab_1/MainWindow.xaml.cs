@@ -24,12 +24,9 @@ namespace Lab_1
         public MainWindow()
         {
             InitializeComponent();
-            Figures mainList = new Figures(mainDrawing);
-            mainList.Add(new Line(new Point(10, 10), new Point(20, 50)));
-
-            
-        //    mainDrawing.Geometry = paintGroup;
-        //    mainPaint.Source = new DrawingImage(mainDrawing);
+            Figures mainList = new Figures();
+            mainList.Add(new Line(new Point(10, 10), new Point(40, 10)));
+            mainPaint.Source = mainList.Drawing();
         }
     }
 }

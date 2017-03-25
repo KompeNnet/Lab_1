@@ -9,6 +9,6 @@ namespace Lab_1
 {
     interface IShape
     {
-        void Draw(GeometryDrawing mainDrawing);
+        void Draw(GeometryGroup mainDrawingGroup);
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="Ellipse.cs" />
     <Compile Include="Figures.cs" />
     <Compile Include="IShape.cs" />
+    <Compile Include="Rectangle.cs" />
     <Compile Include="Rombus.cs" />
     <Compile Include="Square.cs" />
     <Page Include="MainWindow.xaml">
