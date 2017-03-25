@@ -12,7 +12,7 @@ namespace Lab_1
     {
         private Point top, right;
 
-        public Rombus(Point _start, Point _finish)
+        public Rombus(Point _start, Point _finish) : base(_start, _finish)
         {
             this.top = _start;
             this.right = _finish;
@@ -20,7 +20,7 @@ namespace Lab_1
 
         public void Draw(GeometryDrawing mainDrawing)
         {
-
+            //TODO
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Lab_1
         public void Draw(GeometryDrawing mainDrawing)
         {
             LineGeometry line = new LineGeometry(start, end);
+            //TODO??
         }
     }
 }

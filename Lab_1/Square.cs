@@ -12,7 +12,7 @@ namespace Lab_1
     {
         private Point upperLeft, downRight;
 
-        public Square(Point _start, Point _finish)
+        public Square(Point _start, Point _finish) : base(_start, _finish)
         {
             this.upperLeft = _start;
             this.downRight = _finish;
@@ -20,7 +20,7 @@ namespace Lab_1
 
         public void Draw(GeometryDrawing mainDrawing)
         {
-
+            //TODO
         }
     }
 }
