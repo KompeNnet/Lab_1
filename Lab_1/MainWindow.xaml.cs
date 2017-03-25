@@ -20,16 +20,16 @@ namespace Lab_1
     /// </summary>
     public partial class MainWindow : Window
     {
+        GeometryDrawing mainDrawing;
         public MainWindow()
         {
             InitializeComponent();
-            GeometryDrawing mainDrawing = new GeometryDrawing();
             Figures mainList = new Figures(mainDrawing);
             mainList.Add(new Line(new Point(10, 10), new Point(20, 50)));
-            mainList.Drawing(mainDrawing);
+
             
-        //    mainDrawing.Geometry = paintGroup;                    //вместо paintGroup можно line типа GeometryLine и т.п.
-        //    mainPaint.Source = new DrawingImage(mainDrawing);     //две строчки. Для рисования. 
+        //    mainDrawing.Geometry = paintGroup;
+        //    mainPaint.Source = new DrawingImage(mainDrawing);
         }
     }
 }

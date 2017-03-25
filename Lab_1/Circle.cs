@@ -11,7 +11,7 @@ namespace Lab_1
     {
         public void Draw(GeometryDrawing mainDrawing)
         {
-            //TODO
+
         }
     }
 }
