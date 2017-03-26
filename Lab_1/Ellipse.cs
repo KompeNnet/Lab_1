@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace Lab_1
 {
     class Ellipse : IShape
     {
-        public void Draw(GeometryGroup mainDrawingGroup)
-        {
+        private Point center, radius;
 
+        public Ellipse(Point _center, Point _radXY)
+        {
+            this.center = _center;
+            this.radius = _radXY;
+        }
+
+        public virtual void Draw(GeometryGroup mainDrawingGroup)
+        {
+            mainDrawingGroup.Children.Add(new EllipseGeometry(center, radius.X, radius.Y));
         }
     }
 }

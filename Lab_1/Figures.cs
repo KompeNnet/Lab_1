@@ -27,8 +27,8 @@ namespace Lab_1
         {
             GeometryDrawing mainDrawing = new GeometryDrawing();
             GeometryGroup mainDrawingGroup = new GeometryGroup();
-            mainDrawing.Brush = Brushes.Brown;
-            mainDrawing.Pen = new Pen(mainDrawing.Brush, 0.5);
+            mainDrawing.Brush = Brushes.Beige;
+            mainDrawing.Pen = new Pen(Brushes.RosyBrown, 3);
             foreach (IShape shape in mainList)
             {
                 shape.Draw(mainDrawingGroup);

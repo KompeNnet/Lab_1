@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace Lab_1
 {
     class Rectangle : IShape
     {
-        public void Draw(GeometryGroup mainDrawingGroup)
-        {
+        private Point upperLeft, downRight;
 
+        public Rectangle(Point _upperLeft, Point _downRight)
+        {
+            this.upperLeft = _upperLeft;
+            this.downRight = _downRight;
+        }
+
+        public virtual void Draw(GeometryGroup mainDrawingGroup)
+        {
+            mainDrawingGroup.Children.Add(new RectangleGeometry(new Rect(upperLeft, downRight)));
         }
     }
 }

@@ -8,22 +8,20 @@ using System.Windows.Media;
 
 namespace Lab_1
 {
-    class Square : Line
+    class Square : Rectangle
     {
         private Point upperLeft, downRight;
 
-        public Square(Point _start, Point _finish) : base(_start, _finish)
+        public Square(Point _upperLeft, Point _downRight) : base(_upperLeft, _downRight)
         {
-            this.upperLeft = _start;
-            this.downRight = _finish;
+            this.upperLeft = _upperLeft;
+            this.downRight = _downRight;
         }
 
-        public void Draw(GeometryGroup mainDrawingGroup)
+        public override void Draw(GeometryGroup mainDrawingGroup)
         {
-            mainDrawingGroup.Children.Add(new LineGeometry(upperLeft, new Point(downRight.X, upperLeft.Y)));
-            mainDrawingGroup.Children.Add(new LineGeometry(new Point(downRight.X, upperLeft.Y), downRight));
-            mainDrawingGroup.Children.Add(new LineGeometry(downRight, new Point(upperLeft.X, downRight.Y)));
-            mainDrawingGroup.Children.Add(new LineGeometry(new Point(upperLeft.X, downRight.Y), upperLeft));
+            downRight.Y = upperLeft.Y + (downRight.X - upperLeft.X);
+            mainDrawingGroup.Children.Add(new RectangleGeometry(new Rect(upperLeft, downRight), 2, 2));
         }
     }
 }
