@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media;
 
 namespace Lab_1
@@ -12,10 +7,10 @@ namespace Lab_1
     {
         private Point upperLeft, downRight;
 
-        public Square(Point _upperLeft, Point _downRight) : base(_upperLeft, _downRight)
+        public Square(Point _upperLeft, Point _right) : base(_upperLeft, _right)
         {
             this.upperLeft = _upperLeft;
-            this.downRight = _downRight;
+            this.downRight = _right;
         }
 
         public override void Draw(GeometryGroup mainDrawingGroup)
